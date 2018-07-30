@@ -16,8 +16,9 @@ int main(int argc, char *argv[]) {
 
    res_ = lanczos(A, k);
  
-   printf("Results saved in result file.\n");
-
+   printf("Results saved in result file.\nDiagonal Vector:\n");
+   printvector(res_);
+	
    for(i=0; i<2; i++) 
 	free((res_+i)->value);
    free(res_);
